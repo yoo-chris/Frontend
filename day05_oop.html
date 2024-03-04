@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // literal - 숫자, 문자열, 논리값
+        // 함수리터럴, 배열리터럴, 객체리터럴
+        var show = function()
+        {
+            console.log('fun...');
+        }
+
+        // 객체생성방법 - json, 생성자함수패턴, class
+        var pobj = {
+            x:100,
+            y:200,
+            myShape:'Player',
+            display:function()
+            {
+                console.log(this.myShape+':'+this.x+','+this.y);
+            }
+        }
+
+        pobj.display();
+        
+        pobj.moveLeft=function()
+        {
+            this.x -= 10;
+            this.display();
+        }
+        pobj.moveLeft();
+        pobj.moveLeft();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

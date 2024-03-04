@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        window.alert('window...start');
+        function hfun() {
+            var hObj = window.document.getElementById('h');
+            hObj.style.backgroundColor='red';
+            hObj.style.color='white';
+        }
+
+        window.onload=function()
+        {
+            var hObj = window.document.getElementById('h');
+            hObj.style.backgroundColor='blue';
+            hObj.style.color='white';
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="h" onclick="hfun()">로그인 화면</h1>
+        <img id="bge" src="./img/back.jpeg" width="50%" height="50%">
+    </div>
+</body>
+</html>

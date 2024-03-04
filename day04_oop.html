@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        class Player{
+            //속성
+            #x=0;
+            #y=0;
+
+            constructor(){
+                this.#x=100;
+                this.#y=200;
+                this.myShape='Player';
+            }
+            //메소드
+            display()
+            {
+                console.log(`${this.myShape}=${this.#x},${this.#y}`);
+                //console.log(this.myShape);
+            }
+            
+            moveLeft()
+            {
+                this.#x -= 10;
+                this.display();
+            }
+
+            moveRight()
+            {
+                this.#x += 10;
+                this.display();
+            }
+        }
+        class Enemy{
+            //속성
+            #x=0;
+            #y=0;
+            constructor(){
+                this.#x=1000;
+                this.#y=2000;
+                this._myShape='Enemy';
+            }
+            //메소드
+            display()
+            {
+                console.log(`${this._myShape}=${this.#x},${this.#y}`);
+            }
+            
+            moveLeft()
+            {
+                this.#x += 10;
+                this.display();
+            }
+
+            moveRight()
+            {
+                this.#x += 10;
+                this.display();
+            }
+
+            moveUp()
+            {
+                this.#y += 10;
+                this.display();
+            }
+
+            moveDown()
+            {
+                this.#y -= 10;
+                this.display();
+            }
+        }
+        let pObj = new Player();
+        pObj.display();
+        pObj.moveLeft();
+        pObj.moveLeft();
+
+        let eObj1 = new Enemy();
+        eObj1._myShape='Enemy1';
+        eObj1.display();
+        eObj1.moveUp();
+        eObj1.moveUp();
+        eObj1.moveLeft();
+
+        let eObj2 = new Enemy();
+        eObj2._myShape='Enemy2';
+        eObj2.display();
+        eObj2.moveRight();
+        eObj2.moveRight();
+        eObj2.moveDown();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
