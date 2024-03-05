@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #zzang{
+            border: blue;
+        }
+    </style>
+    <script>
+        window.onload=function()
+        {
+            let hObjList = window.document.getElementsByTagName("h1");
+            console.log(hObjList);
+            for (let hObj of hObjList)
+            {
+                hObj.style.backgroundColor='blue';
+                hObj.style.color='white';
+            }
+
+            //이미지 교체
+            let imgObj = document.querySelector('#zzang');
+            
+            // imgObj.onmouseover=function(event)
+            // {
+            //     let imgPath='../img/back.jpeg';
+            //     imgObj.setAttribute('src', imgPath);
+            // }
+
+            // imgObj.onmouseout=function(event)
+            // {
+            //     let imgPath='../img/짱구-컴퓨터-배경화면3.png';
+            //     imgObj.setAttribute('src', imgPath);
+            // }
+            
+
+            let h2Obj = window.document.getElementById('desc');
+            imgObj.onclick=function(event)
+            {
+                if (h2Obj.style.display == 'block'){
+                    h2Obj.style.display = 'none';
+                }
+                else{
+                    h2Obj.style.display = 'block'
+                }
+            }
+
+            // imgObj.onclick=function(event)
+            // {
+            //     var newDes = document.createElement("h2");
+            //     var txtNode = document.createTextNode("Description");
+            //     newDes.appendChild(txtNode);
+            //     divObj.appendChild(newDes);
+            // }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>로그인 화면</h1>
+        <img id="zzang" src="../img/짱구-컴퓨터-배경화면3.png" width="50%", height="50%">
+        <h2 id="desc" style="display: none;">이미지에 대한 설명</h2>
+        <h1>2222222222</h1>
+    </div>
+</body>
+</html>
